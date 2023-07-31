@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex and Collage</title>
+    <style>
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .box {
+            background-color: aqua;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .container2 {
+
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .items {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .row {
+            height: 400px;
+            display: flex;
+            gap: 5px;
+            margin-bottom: 5px;
+        }
+
+        .row>div {
+            flex: 1;
+        }
+
+        .vertical-collage {
+            height: calc((100% - 5px)/2);
+        }
+
+        .square-collage {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2px;
+        }
+
+        @media screen and (max-width:576px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Flexible Flex</h1>
+        <h2>And</h2>
+        <h3>My Picture collage</h3>
+    </header>
+    <main>
+        <div class="container">
+            <div class="box">
+                <h3>First flexbox</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias recusandae corrupti quod minima?
+                    Dolor modi magni est iure! Ipsam aspernatur ratione a non recusandae esse vitae voluptates vero
+                    quaerat repellat!</p>
+            </div>
+            <div class="box">
+                <h3>Second flexbox</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias recusandae corrupti quod minima?
+                    Dolor modi magni est iure! Ipsam aspernatur ratione a non recusandae esse vitae voluptates vero
+                    quaerat repellat!</p>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="items">Items - 1</div>
+            <div class="items">Items - 2</div>
+            <div class="items">Items - 3</div>
+            <div class="items">Items - 4</div>
+            <div class="items">Items - 5</div>
+            <div class="items">Items - 6</div>
+            <div class="items">Items - 7</div>
+            <div class="items">Items - 8</div>
+            <div class="items">Items - 9</div>
+            <div class="items">Items - 10</div>
+        </div>
+        <br>
+        <br>
+        <h2>My Picture Collage</h2>
+        <section>
+            <div class="row">
+                <img src="images/A.jpg" alt="">
+            </div>
+            <div class="row">
+                <div>
+                    <img src="images/B.jpg" alt="">
+                </div>
+                <div>
+                    <img src="images/C.jpg" alt="">
+                </div>
+                <div class="vertical-collage">
+                    <img src="images/D.jpg" alt="">
+                    <img src="images/E.jpg" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <img src="images/F.jpg" alt="">
+                </div>
+                <div class="square-collage">
+                    <img src="images/G.jpg" alt="">
+                    <img src="images/G.jpg" alt="">
+                    <img src="images/G.jpg" alt="">
+                    <img src="images/G.jpg" alt="">
+                </div>
+                <div>
+                    <img src="images/H.jpg" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
